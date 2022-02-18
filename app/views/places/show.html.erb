@@ -1,0 +1,15 @@
+<h1><%= @place.name %></h1>
+<h2><%= @place.city %>, <%= @place.state %></h2>
+
+<h3>Places</h3>
+<ul>
+    <% for post in @place.id %>
+        <li>
+            <%= post.title %>, <%= post.description %>, <%= post.posted_on %>
+        </li>
+    <% end %>
+</ul>
+
+<a href="/places/new?place_id=<%= @place.id %>">Add contact</a>
+
+<a href="/compplacesanies">Back to all companies</a>
