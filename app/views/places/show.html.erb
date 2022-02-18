@@ -3,13 +3,13 @@
 
 <h3>Places</h3>
 <ul>
-    <% for post in @place.id %>
+    <% for place in @place.id %>
         <li>
-            <%= post.title %>, <%= post.description %>, <%= post.posted_on %>
+            <%= place.name %>
         </li>
     <% end %>
 </ul>
 
-<a href="/places/new?place_id=<%= @place.id %>">Add contact</a>
+<a href="/places/new?place_id=<%= @place.id %>">Add Place</a>
 
-<a href="/compplacesanies">Back to all companies</a>
+<a href="/places">Back to all places</a>
