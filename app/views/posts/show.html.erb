@@ -1,14 +1,8 @@
-<h1>New Post</h1>
+<h1><%= @post.title %>, <%= @post.description %></h1>
 
-<%= form_with model: @post do |form| %>
-  <p>
-    <%= form.label "title" %>
-    <%= form.text_field "first_name" %>
-    <%= form.label "last_name" %>
-    <%= form.text_field "last_name" %>
-  </p>
-  <p>
-    <%= form.hidden_field "company_id" %>
-  </p>
-  <%= form.submit %>
-<% end %>
+<ul>
+  <li><%= @post.title %></li>
+  <li><%= @post.description %></li>
+</ul>
+
+<p><a href="/places/<%= @post.place.id %>">Back to <%= @post.place.title %></a></p>

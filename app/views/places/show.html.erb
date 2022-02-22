@@ -1,15 +1,14 @@
 <h1><%= @place.name %></h1>
-<h2><%= @place.city %>, <%= @place.state %></h2>
 
 <h3>Places</h3>
 <ul>
-    <% for place in @place.id %>
+    <% for place in @place.posts %>
         <li>
             <%= place.name %>
         </li>
     <% end %>
 </ul>
 
-<a href="/places/new?place_id=<%= @place.id %>">Add Place</a>
+<a href="/posts/new?place_id=<%= @place.id %>">Add Place</a>
 
 <a href="/places">Back to all places</a>

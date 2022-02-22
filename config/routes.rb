@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :places
   resources :posts
+  root to: "places#index"
+
 end
